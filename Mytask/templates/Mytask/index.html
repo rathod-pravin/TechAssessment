@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>My task</title>
+
+  </head>
+  <body>
+  {% load static %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">My task</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    </ul>
+    </nav>
+</div>
+  <div class="container">
+
+    <form action='search/' method='post'> {% csrf_token %}
+        <label for="exampleFormControlTextarea1" class="form-label">find a person...</label>
+        <textarea class="form-control" name="text" id="exampleFormControlTextarea1" rows="3" style="height: 52px;"></textarea>
+        <button type="submit" class="btn btn-dark">search name.</button>
+    </form>
+
+    <form action='searchurl/' method='post'> {% csrf_token %}
+        <label for="exampleFormControlTextarea2" class="form-label">find a image by url...</label>
+        <textarea class="form-control" name="texturl" id="exampleFormControlTextarea2" rows="3" style="height: 52px;"></textarea>
+        <button type="submit" class="btn btn-dark">search image by url.</button>
+    </form>
+    <br>
+
+    <a href="allitem/">click here to get all records from database....</a>
+
+</div>
+  </div>
+
+</body>
+</html>
